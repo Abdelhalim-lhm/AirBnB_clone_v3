@@ -19,7 +19,7 @@ def teardown_app(exception):
 def error_404(exception):
     """ handle error 404 """
     response = {"error": "Not found"}
-    return jsonify(response)
+    return jsonify(response), 404
 
 
 if __name__ == "__main__":
